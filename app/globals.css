@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* BASE Theme - Dark blue background, Base blue accents */
+  --color-bg: hsl(220, 40%, 8%);
+  --color-fg: hsl(0, 0%, 95%);
+  --color-surface: hsl(220, 35%, 12%);
+  --color-primary: #0052ff;
+  --color-accent: #0066ff;
+  --color-low-energy: hsl(10, 80%, 60%);
+  --color-medium-energy: hsl(45, 80%, 60%);
+  --color-high-energy: hsl(90, 80%, 50%);
+  --color-text-primary: hsl(0, 0%, 95%);
+  --color-text-secondary: hsl(0, 0%, 60%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
